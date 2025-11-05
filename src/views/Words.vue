@@ -97,7 +97,6 @@
 import { ref, computed } from 'vue'
 import { useVocabularyStore } from '../stores/vocabulary'
 import { speakWord } from '../utils/speech'
-import type { Word } from '../types'
 
 const vocabularyStore = useVocabularyStore()
 

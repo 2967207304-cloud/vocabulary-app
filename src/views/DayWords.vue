@@ -107,7 +107,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useVocabularyStore } from '../stores/vocabulary'
 import { speakWord } from '../utils/speech'
@@ -166,15 +166,6 @@ const getProficiencyText = (level: number): string => {
   const levels = ['新词', '生疏', '一般', '熟悉', '掌握', '精通']
   return levels[level] || '新词'
 }
-
-/**
- * 页面加载时检查天数是否有效
- */
-onMounted(() => {
-  if (!dayData.value) {
-    router.push('/review')
-  }
-})
 </script>
 
 <style scoped>
